@@ -6,7 +6,7 @@ function FeaturedTVShows() {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
-    fetch('/db.json/tvshows')
+    fetch('db.json/tvshows')
       .then(response => response.json())
       .then(data => setShows(data));
   }, []);
