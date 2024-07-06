@@ -6,10 +6,11 @@ function FeaturedMovies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/movies')
+    fetch('/db.json/movies')
       .then(response => response.json())
       .then(data => setMovies(data));
   }, []);
+  
 
   return (
     <div className="featured-section">

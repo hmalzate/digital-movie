@@ -6,8 +6,8 @@ function MovieList() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    const fetchMovies = fetch('http://localhost:3000/movies').then(response => response.json()); /*fetches data from the URL*/
-    const fetchTVShows = fetch('http://localhost:3000/tvshows').then(response => response.json());
+    const fetchMovies = fetch('/db.json/movies').then(response => response.json()); /*fetches data from the URL*/
+    const fetchTVShows = fetch('/db.json/tvshows').then(response => response.json());
 
     Promise.all([fetchMovies, fetchTVShows]) /*wait for the request to fetch completely*/
       .then(([movies, tvshows]) => {

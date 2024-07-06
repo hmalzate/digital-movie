@@ -10,12 +10,12 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch(`http://localhost:3000/movies/${id}`);
+        let response = await fetch(`/db.json/movies/${id}`);
         if (response.ok) {
           let data = await response.json();
           setMovie(data);
         } else {
-          response = await fetch(`http://localhost:3000/tvshows/${id}`);
+          response = await fetch(`/db.json/tvshows/${id}`);
           if (response.ok) {
             let data = await response.json();
             setMovie(data);
