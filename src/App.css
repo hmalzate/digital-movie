@@ -1,0 +1,529 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #e705b3;
+  margin: 0;
+  padding: 0;
+}
+
+/* App Layout */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+  background-color: black;
+  color: rgb(242, 0, 125);
+  padding: 0rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 8px solid rgb(217, 0, 255);
+  flex-wrap: wrap;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 150px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 2rem;
+  font-family: "URW Chancery L", cursive;
+  font-weight: bold;
+  color: rgb(242, 0, 125);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: silver;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: "Chalkduster", fantasy;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-links a:hover {
+  color: magenta;
+  background-color: rgb(108, 108, 108);
+}
+
+/* Hero Section Styles */
+.hero-slide {
+  position: relative;
+  height: 40vh;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  bottom: 2%;
+  left: 2%;
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-style: bold;
+  margin: 0;
+  padding: 0;
+  color: rgb(242, 241, 247);
+  -webkit-text-stroke: 3px rgb(4, 5, 4);
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+  margin: 0;
+  color: rgb(234, 246, 6);
+  -webkit-text-stroke: 1.2px rgb(14, 13, 13);
+  font-style: bold;
+}
+
+/* New Section Below Hero Banner */
+.hero-banner-bottom {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.hero-banner-bottom h1 {
+  color: gold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-banner-bottom p {
+  color: silver;
+  font-size: 1rem;
+}
+
+/* Featured Section Styles */
+.featured-section {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-header h2 {
+  font-size: 1.5rem;
+  color: white;
+}
+
+.view-all a {
+  color: gold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.view-all a:hover {
+  color: magenta;
+}
+
+.featured-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1rem 0;
+}
+
+.featured-item {
+  background: #29292a;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  flex: 0 0 auto;
+  width: 18vw;
+  min-width: 150px; /* Ensure minimum width */
+}
+
+.featured-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 4px;
+}
+
+.featured-item h3 {
+  margin-top: 0.5rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.featured-item:hover {
+  transform: scale(1.05);
+}
+
+.category-tag {
+  background-color: gold;
+  color: black;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Movie List Styles */
+.movie-list {
+  padding: 2rem;
+}
+
+.movie-list .grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 1rem;
+}
+
+.movie-item {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 23%;
+  transition: transform 0.3s;
+}
+
+.movie-item img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.movie-item h3 {
+  margin-top: 0.5rem;
+  color: black;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+/* Movie Detail Styles */
+.movie-detail {
+  background-color: #0b1a30;
+  color: white;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.movie-detail-header {
+  display: flex;
+  width: 90%;
+  background-color: #1c1c1c;
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.movie-detail-poster {
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 12px 0 0 12px;
+}
+
+.movie-detail-info {
+  padding: 3rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.movie-detail-info h2 {
+  font-size: 3rem;
+  color: magenta;
+  margin-bottom: 1.5rem;
+}
+
+.movie-detail-info p {
+  font-size: 1.5rem;
+  color: #d3d3d3;
+  margin-bottom: 1rem;
+}
+
+.movie-detail-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.rent-button, .buy-button {
+  background-color: #e705b3;
+  color: black;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.rent-button:hover, .buy-button:hover {
+  background-color: #d3d3d3;
+  color: black;
+}
+
+.movie-detail-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  margin: 1rem 0;
+}
+
+.content-section h2 {
+  font-size: 2rem;
+  color: magenta;
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.content-item {
+  position: relative;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.content-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.content-info {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  padding: 1rem;
+}
+
+.content-info h3 {
+  font-size: 1.5rem;
+  color: magenta;
+  margin-bottom: 1rem;
+}
+
+.content-info p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.content-link {
+  background-color: magenta;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.content-link:hover {
+  background-color: white;
+  color: magenta;
+}
+
+/* Form Styles */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+  background-color: black;
+}
+
+.form {
+  background: #979696;
+  padding: 2rem;
+  border: 5px solid #05d5f5;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.form h2 {
+  margin-bottom: 1rem;
+  color: rgb(255, 0, 234);
+}
+
+.form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: black;
+  font-weight: bold;
+}
+
+.form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #a804d1;
+  border-radius: 4px;
+}
+
+.form button {
+  width: 100%;
+  padding: 0.5rem;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background: #555;
+}
+
+.signup-link {
+  margin-top: 1rem;
+  text-align: center;
+  color: white;
+}
+
+.signup-link a {
+  color: #e705b3;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: black;
+  color: silver;
+  text-align: center;
+  padding: 2rem 0;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  margin-bottom: 1rem;
+}
+
+.footer h4 {
+  color: gold;
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  color: magenta;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .featured-grid, .actor-spotlight, .cinema-spotlight {
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+
+  .featured-item, .spotlight-item {
+    width: 40vw; /* Maintain width for featured items */
+  }
+}
