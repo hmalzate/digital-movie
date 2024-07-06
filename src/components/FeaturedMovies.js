@@ -6,10 +6,11 @@ function FeaturedMovies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch('db.json/movies')
+    fetch('/db.json')
       .then(response => response.json())
-      .then(data => setMovies(data));
+      .then(data => setMovies(data.movies));
   }, []);
+  
   
 
   return (
