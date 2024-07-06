@@ -27,7 +27,7 @@ function FeaturedTVShows() {
         {shows.map((show) => (
           <div key={show.id} className="featured-item">
             <Link to={`/movie/${show.id}`}>
-              <div className="category-tag">{show.category}</div>
+              <div className="category-tag">{show.genre}</div>
               <img src={show.poster} alt={show.title} />
               <h3>{show.title}</h3>
             </Link>
