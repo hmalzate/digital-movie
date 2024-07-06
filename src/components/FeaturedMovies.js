@@ -2,16 +2,18 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
+const apiUrl = process.env.NODE_ENV === 'production' 
+  ? process.env.REACT_APP_API_URL_PROD 
+  : process.env.REACT_APP_API_URL;
+
 function FeaturedMovies() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    fetch('/db.json')
+    fetch(`${apiUrl}/movies`)
       .then(response => response.json())
-      .then(data => setMovies(data.movies));
+      .then(data => setMovies(data));
   }, []);
-  
-  
 
   return (
     <div className="featured-section">
