@@ -12,7 +12,8 @@ function FeaturedMovies() {
   useEffect(() => {
     fetch(`${apiUrl}/movies`)
       .then(response => response.json())
-      .then(data => setMovies(data));
+      .then(data => setMovies(data))
+      .catch(error => console.error('Error fetching movies:', error));
   }, []);
 
   return (

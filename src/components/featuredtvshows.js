@@ -12,7 +12,8 @@ function FeaturedTVShows() {
   useEffect(() => {
     fetch(`${apiUrl}/tvshows`)
       .then(response => response.json())
-      .then(data => setShows(data));
+      .then(data => setShows(data))
+      .catch(error => console.error('Error fetching TV shows:', error));
   }, []);
 
   return (

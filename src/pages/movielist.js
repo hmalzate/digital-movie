@@ -16,7 +16,8 @@ function MovieList() {
     Promise.all([fetchMovies, fetchTVShows])
       .then(([movies, tvshows]) => {
         setItems([...movies, ...tvshows]);
-      });
+      })
+      .catch(error => console.error('Error fetching movies and TV shows:', error));
   }, []);
 
   return (
