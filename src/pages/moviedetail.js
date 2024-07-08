@@ -2,10 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import '../App.css';
 
-const apiUrl = process.env.NODE_ENV === 'production' 
-  ? process.env.REACT_APP_API_URL_PROD 
-  : process.env.REACT_APP_API_URL;
-
 const MovieDetail = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
@@ -14,12 +10,12 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch(`${apiUrl}/movies/${id}`);
+        let response = await fetch(`http://localhost:3000/movies/${id}`);
         if (response.ok) {
           let data = await response.json();
           setMovie(data);
         } else {
-          response = await fetch(`${apiUrl}/tvshows/${id}`);
+          response = await fetch(`http://localhost:3000/tvshows/${id}`);
           if (response.ok) {
             let data = await response.json();
             setMovie(data);

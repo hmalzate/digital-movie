@@ -4,6 +4,8 @@ const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
-server.use(router);
+server.use('./services/api', router);
 
-module.exports = server;
+server.listen(3000, () => {
+  console.log('Server is running on port 3000');
+});

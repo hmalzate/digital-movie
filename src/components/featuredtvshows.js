@@ -2,18 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-const apiUrl = process.env.NODE_ENV === 'production' 
-  ? process.env.REACT_APP_API_URL_PROD 
-  : process.env.REACT_APP_API_URL;
-
 function FeaturedTVShows() {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
-    fetch(`${apiUrl}/tvshows`)
+    fetch('http://localhost:3000/tvshows')
       .then(response => response.json())
-      .then(data => setShows(data))
-      .catch(error => console.error('Error fetching TV shows:', error));
+      .then(data => setShows(data));
   }, []);
 
   return (
@@ -28,7 +23,7 @@ function FeaturedTVShows() {
         {shows.map((show) => (
           <div key={show.id} className="featured-item">
             <Link to={`/movie/${show.id}`}>
-              <div className="category-tag">{show.genre}</div>
+              <div className="category-tag">{show.category}</div>
               <img src={show.poster} alt={show.title} />
               <h3>{show.title}</h3>
             </Link>
