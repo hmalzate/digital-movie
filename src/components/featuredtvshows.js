@@ -6,9 +6,10 @@ function FeaturedTVShows() {
   const [shows, setShows] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/tvshows')
+    fetch('/db.json')
       .then(response => response.json())
-      .then(data => setShows(data));
+      .then(data => setShows(data.tvshows))
+      .catch(error => console.error('Error fetching the JSON data:', error));
   }, []);
 
   return (

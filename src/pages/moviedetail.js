@@ -10,18 +10,17 @@ const MovieDetail = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let response = await fetch(`http://localhost:3000/movies/${id}`);
+        const response = await fetch('/db.json');
         if (response.ok) {
-          let data = await response.json();
-          setMovie(data);
-        } else {
-          response = await fetch(`http://localhost:3000/tvshows/${id}`);
-          if (response.ok) {
-            let data = await response.json();
-            setMovie(data);
+          const data = await response.json();
+          const movie = data.movies.find(movie => movie.id === parseInt(id)) || data.tvshows.find(show => show.id === parseInt(id));
+          if (movie) {
+            setMovie(movie);
           } else {
             setError('Movie or TV Show not found');
           }
+        } else {
+          setError('Error fetching the JSON data');
         }
       } catch (error) {
         console.error('Error fetching movie or TV show:', error);

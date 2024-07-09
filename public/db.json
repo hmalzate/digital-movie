@@ -1,10 +1,10 @@
 {
   "movies": [
-    { "id": 1, "title": "Alien", "poster": "/img/alien.jpg", "description": "A classic sci-fi horror movie.", "releaseDate": "1979", "genre": "Sci-Fi", "rating": "R", "duration": "117 mins", "priceRent": "$3.50", "priceBuy": "$10.00" },
+    { "id": 1, "title": "Alien", "poster": "/img/Alien.jpg", "description": "A classic sci-fi horror movie.", "releaseDate": "1979", "genre": "Sci-Fi", "rating": "R", "duration": "117 mins", "priceRent": "$3.50", "priceBuy": "$10.00" },
     { "id": 2, "title": "Avatar", "poster": "/img/avatar2.jpg", "description": "A visually stunning movie set on the planet Pandora.", "releaseDate": "2009", "genre": "Action", "rating": "PG-13", "duration": "162 mins", "priceRent": "$4.00", "priceBuy": "$12.00" },
     { "id": 3, "title": "Rio 2", "poster": "/img/rio_2.jpg", "description": "A colorful animated adventure.", "releaseDate": "2014", "genre": "Animation", "rating": "G", "duration": "101 mins", "priceRent": "$3.00", "priceBuy": "$10.00" },
     { "id": 4, "title": "X-Men", "poster": "/img/x-men.jpg", "description": "A superhero movie about mutants.", "releaseDate": "2000", "genre": "Action", "rating": "PG-13", "duration": "104 mins", "priceRent": "$3.99", "priceBuy": "$13.00" },
-    { "id": 5, "title": "Baby Boss 2", "poster": "/img/baby_boss2.jpg", "description": "The sequel to the animated comedy.", "releaseDate": "2021", "genre": "Animation", "rating": "PG", "duration": "107 mins", "priceRent": "$5.00", "priceBuy": "$16.00" },
+    { "id": 5, "title": "Baby Boss 2", "poster": "/img/Baby_boss2.jpg", "description": "The sequel to the animated comedy.", "releaseDate": "2021", "genre": "Animation", "rating": "PG", "duration": "107 mins", "priceRent": "$5.00", "priceBuy": "$16.00" },
     { "id": 6, "title": "Godzilla vs. Kong", "poster": "/img/godzillaxkong.jpg", "description": "The epic showdown between Godzilla and King Kong.", "releaseDate": "2021", "genre": "Action", "rating": "PG-13", "duration": "113 mins", "priceRent": "$3.00", "priceBuy": "$14.99" },
     { "id": 7, "title": "Dune", "poster": "/img/dune.jpg", "description": "A sci-fi epic based on the novel by Frank Herbert.", "releaseDate": "2021", "genre": "Sci-Fi", "rating": "PG-13", "duration": "155 mins", "priceRent": "$2.00", "priceBuy": "$8.00" },
     { "id": 8, "title": "Narnia", "poster": "/img/narnia.jpg", "description": "A fantasy adventure in the magical world of Narnia.", "releaseDate": "2005", "genre": "Fantasy", "rating": "PG", "duration": "143 mins", "priceRent": "$4.00", "priceBuy": "$12.00" },
